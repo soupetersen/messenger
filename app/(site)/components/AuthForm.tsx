@@ -23,7 +23,7 @@ export function AuthForm() {
   useEffect(() => {
     if (session?.status === "authenticated") {
       toast.success("Authenticated!");
-      router.push("/users");
+      router.push("/conversations");
     }
   }, [session?.status, router]);
 
