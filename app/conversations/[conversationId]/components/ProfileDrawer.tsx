@@ -38,7 +38,7 @@ export default function ProfileDrawer({
   }, [data.name, otherUser.name]);
 
   const { members } = useActiveList();
-  const isActive = members.indexOf(otherUser?.email) !== -1;
+  const isActive = members.indexOf(otherUser?.email ?? "") !== -1;
 
   const statusText = useMemo(() => {
     if (data.isGroup) {

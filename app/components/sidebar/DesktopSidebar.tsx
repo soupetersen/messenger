@@ -8,7 +8,7 @@ import Avatar from "../Avatar";
 import SettingsModal from "./SettingsModal";
 
 interface DesktopSidebarProps {
-  currentUser: User;
+  currentUser: User | null;
 }
 
 export default function DesktopSidebar({ currentUser }: DesktopSidebarProps) {

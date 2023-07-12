@@ -1,4 +1,5 @@
 import prisma from "@/app/libs/prismadb";
+import { Message } from "@prisma/client";
 
 const getMessages = async (conversationId: string) => {
   try {
@@ -15,7 +16,7 @@ const getMessages = async (conversationId: string) => {
       },
     });
 
-    return messages;
+    return messages as Message[];
   } catch (error: any) {
     return [];
   }
